@@ -1,0 +1,47 @@
+def add():
+    sum = num1+num2
+    print(num1,operation_want, num2 ,end=" = ")
+    print(sum)
+
+
+def subtract():
+    subtraction = num1-num2
+    print(num1,operation_want,num2,end = " = ")
+    print(subtraction)
+
+def multiplication():
+    multiply = num1* num2
+    print(num1,operation_want, num2 ,end=" = ")
+    print(multiply)
+
+def division():
+    divide = num1/num2
+    print(num1,operation_want, num2 ,end=" = ")
+    print(divide)
+
+def modulo():
+    remainder=num1%num2
+    print(num1,operation_want, num2 ,end=" = ")
+    print(remainder)
+
+
+num1= int(input("enter the first number:"))
+print("'+' for  addition\n '-' for subtraction \n '*' for multiplication \n '%' for remainder \n '/' for division")
+operation_want= input("enter the operator you want:")
+num2= int(input("enter the second number:"))
+if operation_want == '+':
+    add()
+        
+if operation_want == '-':
+    subtract()
+
+if operation_want == '*':
+    multiplication()
+
+if operation_want == '/':
+    division()
+
+if operation_want == '%':
+    modulo()
+
+    
