@@ -1,0 +1,75 @@
+import random
+
+
+print("!INSTRUCTIONS!\n *** ROCK IS STRONGER THAN SCISSORS AND WEAKER THAN PAPER\n *** PAPER IS STRONGER THAN ROCK AND WEAKER THAN SCISSORS \n *** SCISSORS ARE STRONGER THAN PAPER AND WEAKER THAN ROCK\n 'STRONGER ONE WINS ALWAYS'\n ALL THE BEST")
+
+def repeat():
+    
+    materials=selection.split(" ")
+    print(materials)
+    length=len(materials)
+    win = random.randint(0,length-1)
+    print("Computer's choice is",win)
+    #rock_no=0
+    #paper_no=1
+    #scissors_no=2
+
+    win_against0='rock'
+    win_against1='paper'
+    win_against2='scissors'
+    win_against=int(input("enter your choice to play against computer:"))
+    #choice is rock
+    if win == 0:
+        if win_against == 2:
+          print(f"rock wins the game against {win_against2}")
+
+    if win==0:
+        if win_against ==1:
+          print(f"paper wins the game against {win_against0}")
+    if win==0:
+     if win_against == 0:
+          print("you Both selected same choice so match is draw")
+
+
+    #choice is paper
+    if win == 1:
+     if win_against == 0:
+         print(f"paper wins the game against {win_against0}")
+
+    if win==1:
+     if win_against ==2:
+         print(f"scissors wins the game against {win_against1}")
+    if win==1:
+     if win_against == 1:
+         print(" you Both selected same choice so match is draw")
+
+
+    #choice is scissors
+    if win == 2:
+     if win_against == 0:
+        print(f"rock wins the game against {win_against2}")
+
+    if win==2:
+     if win_against ==1:
+        print(f"scissors wins the game against {win_against1}")
+    if win==2:
+     if win_against == 2:
+        print("you Both selected same choice so match is draw")
+
+
+
+def no_Repeat():
+    print("THE END! ")
+
+
+another_try=True 
+while  another_try: 
+   selection=input("enter the names of the materials you want to play with:")
+   repeat()
+   one_more_try=input("enter 'yes' if want another try , else 'no' to exit:")
+   if one_more_try == 'yes':
+    another_try = True
+   elif one_more_try == 'no':
+    another_try = False
+    no_Repeat()
+
